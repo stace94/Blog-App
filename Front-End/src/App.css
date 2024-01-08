@@ -1,0 +1,202 @@
+/* Global box-sizing rule to include padding and borders in the element's total width and height */
+* {
+  box-sizing: border-box;
+}
+
+/* Cursor style for all anchor elements */
+a {
+  cursor: pointer;
+}
+
+/* Body text color */
+body {
+  color: #222;
+}
+
+/* Maximum width for images to ensure responsiveness */
+img {
+  max-width: 100%;
+}
+
+/* Styling for the main content area */
+main {
+  padding: 10px;
+  max-width: 960px;
+  margin: 0 auto;
+}
+
+/* Header styling with flex layout, spacing, and alignment */
+header {
+  display: flex;
+  justify-content: space-between;
+  margin-top: 10px;
+  margin-bottom: 50px;
+  align-items: center;
+}
+
+/* Styling for anchor elements within the header */
+header a {
+  text-decoration: none;
+  color: inherit;
+}
+
+/* Styling for the logo in the header */
+header a.logo {
+  font-weight: bold;
+  font-size: 1.5rem;
+}
+
+/* Styling for the navigation links within the header */
+header nav {
+  display: flex;
+  gap: 15px;
+}
+
+/* Styling for the grid layout of individual posts */
+div.post {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 20px;
+  margin-bottom: 30px;
+}
+
+/* Media query to adjust post layout for screens with a minimum width of 600px */
+@media screen and (min-width: 600px) {
+  div.post {
+    grid-template-columns: .9fr 1.1fr;
+  }
+}
+
+/* Styling for post text content, including heading and anchor elements */
+div.post div.texts h2 {
+  margin: 0;
+  font-size: 1.8rem;
+}
+
+div.post div.texts a {
+  text-decoration: none;
+  color: inherit;
+}
+
+/* Styling for post information section */
+div.post p.info {
+  margin: 6px 0;
+  color: #888;
+  font-size: .7rem;
+  font-weight: bold;
+  display: flex;
+  gap: 10px;
+}
+
+/* Styling for post author link in the information section */
+div.post p.info a.author {
+  color: #333;
+}
+
+/* Styling for post summary */
+div.post p.summary {
+  margin: 10px 0;
+  line-height: 1.4rem;
+}
+
+/* Styling for login and register forms */
+form.login,
+form.register {
+  max-width: 400px;
+  margin: 0 auto;
+}
+
+/* Styling for form input fields */
+input {
+  display: block;
+  margin-bottom: 5px;
+  width: 100%;
+  padding: 5px 7px;
+  border: 1px solid #ccc;
+  background-color: #eee;
+  border-radius: 5px;
+}
+
+/* Styling for form buttons */
+button {
+  cursor: pointer;
+  width: 100%;
+  display: block;
+  background-color: #555;
+  border: 0;
+  color: white;
+  border-radius: 5px;
+  padding: 7px 0;
+}
+
+/* Styling for form headings */
+form.login h1,
+form.register h1 {
+  text-align: center;
+}
+
+/* Styling for post-page image container */
+div.post-page div.image {
+  max-height: 250px;
+  display: flex;
+  overflow: hidden;
+}
+
+/* Styling for post-page image */
+div.post-page div.image img {
+  width: 100%;
+  object-fit: cover;
+  object-position: center center;
+}
+
+/* Styling for various elements within post-page */
+div.post-page a {
+  color: #333;
+  text-decoration: underline;
+}
+
+div.post-page h1 {
+  text-align: center;
+  margin: 10px 0 10px;
+}
+
+div.post-page time {
+  text-align: center;
+  display: block;
+  font-size: .7rem;
+  color: #aaa;
+}
+
+div.post-page div.author {
+  text-align: center;
+  margin-bottom: 20px;
+  font-size: .7rem;
+  font-weight: bold;
+}
+
+div.post-page div.content p {
+  line-height: 1.6rem;
+}
+
+/* Styling for the edit-row section */
+div.edit-row {
+  text-align: center;
+  margin-bottom: 20px;
+}
+
+/* Styling for the edit button within post-page */
+div.post-page a.edit-btn {
+  display: inline-flex;
+  align-items: center;
+  gap: 5px;
+  background-color: #333;
+  color: white;
+  text-decoration: none;
+  border-radius: 5px;
+  padding: 10px 30px;
+}
+
+/* Styling for SVG icons within anchor elements */
+a svg {
+  height: 20px;
+}

@@ -16,9 +16,12 @@ require('dotenv').config();
 
 // Middleware to parse JSON data
 const salt = bcrypt.genSaltSync(10);
-const secret = process.env.SECRET_KEY;
-console.log(secret)
-const DB_URL = process.env.DB_URL;
+//const secret = process.env.SECRET_KEY;
+//const DB_URL = process.env.DB_URL;
+// Enviromental Variables
+const secret = 'asjdhaksfabcafkjvds';
+const DB_URL = 'mongodb+srv://andrewstacy12:blogPassword@cluster0.cinq9ra.mongodb.net/'
+
 app.use(cors({ credentials: true, origin: 'http://localhost:3000' }));
 app.use(express.json());
 app.use(cookieParser());

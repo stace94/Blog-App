@@ -17,9 +17,9 @@ The Blog App is a web application that allows users to create, edit, and view bl
 Follow these steps to get the Blog App up and running on your local machine:
 1. Clone the repository:
   
-   ``` bash
-   git clone https://github.com/your-username/blog.git
-   ```
+   ### ``` bash
+   ###git clone https://github.com/your-username/blog.git
+   ###```
 
 2. Navigate to the client directory and install front-end dependencies:
  

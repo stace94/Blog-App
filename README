@@ -16,28 +16,35 @@ The Blog App is a web application that allows users to create, edit, and view bl
 ## Getting Started
 Follow these steps to get the Blog App up and running on your local machine:
 1. Clone the repository:
-   ```bash
+  
+   ``` bash
    git clone https://github.com/your-username/blog.git
    ```
 
 2. Navigate to the client directory and install front-end dependencies:
-  ```bash
+ 
+   ``` bash
   cd server
   npm install
-  ```bash
+  ```
+
 3.Navigate to the server directory and install back-end dependencies:
 Configure environment variables:
 Create a .env file in the server directory.
 Add the following variables:
-  ```env
+ 
+   ```env
   MONGODB_URI=your_mongodb_connection_string
   SECRET_KEY=your_secret_key_for_jwt
   ```
+
 4. Start the server:
+
   ```bash
   npm install
   ```
 5. Start the front-end development server:
+
   ```bash
   cd client
   npm start

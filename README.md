@@ -34,20 +34,20 @@ Create a .env file in the server directory.
 Add the following variables:
  
 ```env
-  MONGODB_URI=your_mongodb_connection_string
-  SECRET_KEY=your_secret_key_for_jwt
+MONGODB_URI=your_mongodb_connection_string
+SECRET_KEY=your_secret_key_for_jwt
 ```
 
 4. Start the server:
 
 ```bash
-  npm install
+npm install
 ```
 5. Start the front-end development server:
 
 ```bash
-  cd client
-  npm start
+cd client
+npm start
 ```
 6. Open your browser and go to http://localhost:3000 to view the Blog App.
 

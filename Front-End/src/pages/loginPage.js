@@ -8,7 +8,7 @@ export default function LoginPage() {
     const [userName, setUserName] = useState('');
     const [password, setPassword] = useState('');
     const [redirect, setRedirect] = useState(false);
-
+     const API_URL = process.env.REACT_APP_API_URL || 'http://localhost:4000'; // Default URL if env variable is not set
     // Using the useContext hook to access the UserContext and setUserInfo function
     const { setUserInfo } = useContext(UserContext);
 
@@ -17,7 +17,7 @@ export default function LoginPage() {
         ev.preventDefault();
 
         // Sending a POST request to the server for login
-        const response = await fetch('http://localhost:4000/login', {
+        const response = await fetch(`${API_URL}/login`, {
             method: 'POST',
             body: JSON.stringify({ userName, password }),
             headers: { 'Content-Type': 'application/json' },

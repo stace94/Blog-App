@@ -8,7 +8,7 @@ import { Link } from "react-router-dom";
 export default function PostPage() {
     // State variable to store post information
     const [postInfo, setPostInfo] = useState(null);
-
+     const API_URL = process.env.REACT_APP_API_URL || 'http://localhost:4000'; // Default URL if env variable is not set
     // Destructuring user information from the UserContext
     const { userInfo } = useContext(UserContext);
 
@@ -17,7 +17,7 @@ export default function PostPage() {
 
     // useEffect hook to fetch the post information when the component mounts
     useEffect(() => {
-        fetch(`http://localhost:4000/post/${id}`)
+        fetch(`${API_URL}/post/${id}`)
             .then(response => {
                 response.json().then(postInfo => {
                     setPostInfo(postInfo);

@@ -5,10 +5,10 @@ import { useEffect, useState } from "react";
 export default function IndexPage() {
     // State variable to store the array of posts
     const [posts, setPosts] = useState([]);
-
+ const API_URL = process.env.REACT_APP_API_URL || 'http://localhost:4000'; // Default URL if env variable is not set
     // useEffect hook to fetch posts from the server when the component mounts
     useEffect(() => {
-        fetch('http://localhost:4000/post').then(response => {
+        fetch(`${API_URL}/post`).then(response => {
             response.json().then(posts => {
                 // Logging the fetched posts to the console
                 console.log(posts);

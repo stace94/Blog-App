@@ -11,7 +11,7 @@ export default function CreatePost() {
     const [content, setContent] = useState('');
     const [files, setFiles] = useState('');
     const [redirect, setRedirect] = useState(false);
-
+ const API_URL = process.env.REACT_APP_API_URL || 'http://localhost:4000'; // Default URL if env variable is not set
     // Async function to handle the creation of a new post
     async function createNewPost(e) {
         // Creating a FormData object to send data as a multipart/form-data
@@ -27,7 +27,7 @@ export default function CreatePost() {
         e.preventDefault();
 
         // Sending a POST request to create a new post
-        const response = await fetch('http://localhost:4000/post', {
+        const response = await fetch(`${API_URL}/post`, {
             method: "POST",
             body: data,
             credentials: 'include',

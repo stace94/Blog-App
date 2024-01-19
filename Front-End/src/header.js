@@ -4,12 +4,13 @@ import { UserContext } from "./userContext";
 
 
 export default function Header() {
+    const API_URL = process.env.REACT_APP_API_URL || 'http://localhost:4000'; // Default URL if env variable
     // Destructuring values from the UserContext
     const { setUserInfo, userInfo } = useContext(UserContext);
 
     // useEffect hook to fetch user profile information when the component mounts
     useEffect(() => {
-        fetch('http://localhost:4000/profile', {
+        fetch(`${API_URL}/profile`, {
             credentials: 'include',
         }).then(response => {
             response.json().then(userInfo => {
@@ -20,7 +21,7 @@ export default function Header() {
 
     // Function to handle logout
     function logout() {
-        fetch('http://localhost:4000/logout', {
+        fetch(`${API_URL}/logout`, {
             credentials: 'include',
             method: "POST",
         });

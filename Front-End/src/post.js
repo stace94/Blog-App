@@ -3,7 +3,7 @@ import { Link } from "react-router-dom";
 
 
 export default function Post({ _id, title, summary, cover, content, createdAt, author }) {
-  
+   const API_URL= process.env.REACT_APP_API_URL || 'http://localhost:4000'; // Default URL if env variable is not set
   // JSX for rendering the post details
   return (
     <div className="post">
@@ -11,7 +11,7 @@ export default function Post({ _id, title, summary, cover, content, createdAt, a
       <div className="image">
         <Link to={`/post/${_id}`}>
           {/* Displaying the post cover image */}
-          <img src={'http://localhost:4000/' + cover} alt="" />
+          <img src={`${API_URL}/` + cover} alt="" />
         </Link>
       </div>
       <div className="texts">

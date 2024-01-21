@@ -49,7 +49,7 @@ export default function PostPage() {
 
             {/* Rendering the post cover image */}
             <div className="image">
-                <img src={`http://localhost:4000/${postInfo.cover}`} alt="" />
+                <img src={`${API_URL}/${postInfo.cover}`} alt="" />
             </div>
 
             {/* Rendering the post content with HTML dangerously set */}

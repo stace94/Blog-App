@@ -8,7 +8,8 @@ export default function LoginPage() {
     const [userName, setUserName] = useState('');
     const [password, setPassword] = useState('');
     const [redirect, setRedirect] = useState(false);
-     const API_URL = process.env.REACT_APP_API_URL || 'http://localhost:4000'; // Default URL if env variable is not set
+     const API_URL = process.env.REACT_APP_API_URL || 'http://localhost:4000';
+    console.log(API_URL)
     // Using the useContext hook to access the UserContext and setUserInfo function
     const { setUserInfo } = useContext(UserContext);
 

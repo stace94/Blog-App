@@ -7,7 +7,7 @@ import Editor from "../Editor";
 export default function EditPost() {
   // Extracting post ID from the URL parameters
   const { id } = useParams();
- const API_URL = process.env.REACT_APP_API_URL;
+ const API_URL = process.env.REACT_APP_API_URL || 'http://localhost:4000';
   // State variables to store post information, title, summary, content, files, and redirection status
   const [title, setTitle] = useState('');
   const [summary, setSummary] = useState('');
